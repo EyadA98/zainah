@@ -4,8 +4,8 @@
   "description": "Zainah Alfayez Workspace and Grids",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#0A1020",
-  "theme_color": "#0A1020",
+  "background_color": "#161722",
+  "theme_color": "#161722",
   "icons": [
     {
       "src": "assets/icon-192.png",

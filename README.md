@@ -48,3 +48,12 @@ Brand originals `#5465FF`, `#788BFF`, `#9BB1FF`, `#BFD7FF`, `#E2FDFF` remain unc
 
 
 PASTEL SKIES UPDATE: Light and dark UI, widgets, prayer widget, patterns, three time-of-day hero treatments, Z logos and favicon recolored. Existing Supabase project URL and publishable key preserved. Upload all files including assets and grids.
+
+
+PASTEL SKIES V3 AUDIT:
+- Removed 6 accidental CSS insertions inside JS-generated exports and verified inline scripts with node --check.
+- Replaced known legacy Sapphire/navy brand constants across Workspace/Grids UI CSS, default palette lists, patterns and built-in report templates.
+- Kept semantic status colors and customizable spreadsheet/chart data colors where appropriate.
+- Preserved the configured Supabase URL and publishable key in index.html.
+- Both Z brand PNGs and favicon assets are included.
+- Validate in a real browser before considering the change final.
