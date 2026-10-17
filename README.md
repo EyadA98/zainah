@@ -45,3 +45,6 @@ For local viewing without an authenticated Supabase connection, run a local HTTP
 | Selected | `#EDF0FF` | `#24365C` |
 
 Brand originals `#5465FF`, `#788BFF`, `#9BB1FF`, `#BFD7FF`, `#E2FDFF` remain unchanged.
+
+
+PASTEL SKIES UPDATE: Light and dark UI, widgets, prayer widget, patterns, three time-of-day hero treatments, Z logos and favicon recolored. Existing Supabase project URL and publishable key preserved. Upload all files including assets and grids.

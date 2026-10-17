@@ -54,3 +54,44 @@ html.dark th.colsel{background:#24365C}
 .das-studio .das-report-inspector,.das-report-inspector{background:var(--card);border-color:var(--border)}
 .das-report-inspector :is(input,select,textarea),.das-studio :is(input,select,textarea){color:var(--text);border-color:var(--border)}
 .das-studio :is(.das-report-well,.das-design-section,.das-report-condition){border-color:var(--border)}
+
+/* PASTEL SKIES — approved live-preview theme, applied after legacy styling */
+:root{--brand-sapphire:#6D6AEF;--brand-cornflower:#8F83DC;--brand-baby:#B2A6DD;--brand-ice:#D3CCE0;--brand-cyan:#EEEAFE;--bg:#F7F8FA;--card:#FFFFFF;--border:#E5E8EF;--text:#1E2230;--muted:#6B7280;--indigo:#1E2230;--indigo-2:#6D6AEF;--indigo-3:#F5F6FA;--brand-indigo:#6D6AEF;--violet:#6D6AEF;--lavender:#978BDF;--lilac:#B5A9E6;--lilac-soft:#EEEAFE;--lavender-soft:#F3F0FF;--peach:#D3CCE0;--peach-deep:#978BDF;--surface-raised:#F5F6FA;--surface-hover:#F5F3FF;--surface-selected:#EEEAFE;--surface-sel:#EEEAFE;--head-bg:#F5F6FA;--grid-line:#E5E8EF;--row-hover:#F5F3FF;--grid-selection-ink:#6D6AEF;--grid-selection-tint:rgba(109,106,239,.10);--grad-iri:linear-gradient(120deg,#6D6AEF,#978BDF);--grad-action:linear-gradient(120deg,#6D6AEF,#978BDF);--grad:linear-gradient(120deg,#6D6AEF,#978BDF);--grad-iri-rev:linear-gradient(115deg,#B2A6DD,#978BDF,#6D6AEF);--glow-lav:0 7px 22px rgba(109,106,239,.13);--sh-1:0 2px 9px rgba(38,28,91,.035);--sh-2:0 12px 35px rgba(38,28,91,.09)}
+html.dark{--bg:#161722;--card:#232437;--border:#3A3B53;--text:#F5F4FA;--muted:#BCB8D4;--indigo:#1C1D2A;--indigo-2:#2A2B40;--indigo-3:#161722;--brand-indigo:#B6ACE3;--violet:#AAA0FF;--lavender:#9A8CE3;--lilac:#B6ACE3;--lilac-soft:#312F4B;--lavender-soft:#312F4B;--peach:#B6ACE3;--peach-deep:#9A8CE3;--surface-raised:#2A2B40;--surface-hover:#2B2D45;--surface-selected:#312F4B;--surface-sel:#312F4B;--head-bg:#2A2B40;--grid-line:#3A3B53;--row-hover:#2B2D45;--grid-selection-ink:#AAA0FF;--grid-selection-tint:rgba(170,160,255,.13);--grad-iri:linear-gradient(120deg,#8D82FA,#AAA0FF);--grad-action:linear-gradient(120deg,#8D82FA,#AAA0FF);--grad:linear-gradient(120deg,#8D82FA,#AAA0FF);--grad-iri-rev:linear-gradient(115deg,#B6ACE3,#9A8CE3,#8D82FA);--glow-lav:0 7px 22px rgba(141,130,250,.13);--sh-1:0 2px 10px rgba(4,3,16,.18);--sh-2:0 15px 40px rgba(4,3,16,.26)}
+body{background:var(--bg)!important;color:var(--text)}
+body::before{background:radial-gradient(700px 380px at 99% -5%,rgba(178,166,221,.08),transparent 70%),linear-gradient(180deg,#F7F8FA,#F7F8FA)!important}
+html.dark body::before{background:radial-gradient(680px 450px at 100% -15%,rgba(154,140,227,.09),transparent 72%),linear-gradient(180deg,#161722,#161722)!important}
+html:not(.dark) aside{background:#FFFFFF!important;color:#1E2230;border-color:#E5E8EF}
+html.dark aside{background:#1C1D2A!important;color:#F5F4FA;border-color:#3A3B53}
+html:not(.dark) aside button.nav{color:#6B7280}html.dark aside button.nav{color:#BCB8D4}
+html:not(.dark) aside button.nav.active{background:#EEEAFE;color:#6D6AEF}html.dark aside button.nav.active{background:#312F4B;color:#AAA0FF}
+html:not(.dark) aside button.nav.active::before{background:#6D6AEF}html.dark aside button.nav.active::before{background:#AAA0FF}
+html:not(.dark) .topbar,html:not(.dark) .top{background:#FFFFFF!important;border-color:#E5E8EF}
+html.dark .topbar,html.dark .top{background:#1C1D2A!important;border-color:#3A3B53}
+html:not(.dark) .card,html:not(.dark) .dash-widget .card{background:#FFFFFF;border-color:#E5E8EF;box-shadow:var(--sh-1)}
+html.dark .card,html.dark .dash-widget .card{background:#232437;border-color:#3A3B53;box-shadow:var(--sh-1)}
+html:not(.dark) .modal,html:not(.dark) .modal.side{background:#FFFFFF!important;border-color:#E5E8EF}
+html.dark .modal,html.dark .modal.side{background:#232437!important;border-color:#3A3B53}
+html:not(.dark) :is(.fld,.inp,select,textarea){background-color:#FFFFFF;color:#1E2230;border-color:#E5E8EF}
+html.dark :is(.fld,.inp,select,textarea){background-color:#202132;color:#F5F4FA;border-color:#3A3B53}
+html:not(.dark) .btn.soft{background:#FFFFFF;color:#6D6AEF;border-color:#E5E8EF}
+html.dark .btn.soft{background:#2A2B40;color:#AAA0FF;border-color:#3A3B53}
+html.dark .btn:not(.soft):not(.danger),html.dark .btn.pri{color:#171429}
+:where(button,input,select,textarea,a):focus-visible{outline-color:#6D6AEF}html.dark :where(button,input,select,textarea,a):focus-visible{outline-color:#AAA0FF}
+/* Time-aware hero: morning, afternoon and evening retain their own distinct three-color atmospheres. */
+.hero-morning .hx-bg{background:radial-gradient(55% 75% at 82% 20%,rgba(255,219,206,.78),transparent 70%),radial-gradient(65% 80% at 15% 30%,rgba(211,204,240,.8),transparent 72%),linear-gradient(135deg,#9997d8,#c4b5ec,#f3c6cf)!important}
+.hero-afternoon .hx-bg{background:radial-gradient(55% 70% at 82% 20%,rgba(178,166,221,.72),transparent 72%),radial-gradient(60% 80% at 18% 75%,rgba(227,217,247,.52),transparent 75%),linear-gradient(125deg,#6D6AEF,#978BDF,#D3CCE0)!important}
+.hero-evening .hx-bg{background:radial-gradient(65% 60% at 82% 18%,rgba(141,130,250,.45),transparent 70%),radial-gradient(60% 65% at 20% 72%,rgba(107,99,169,.48),transparent 70%),linear-gradient(135deg,#161722,#353153,#594b87)!important}
+/* Prayer widget, dashboard widgets and patterned ornamentation inherit the same identity. */
+.prayer-card .pr2.next{background:linear-gradient(125deg,#6D6AEF,#978BDF)!important;color:#fff!important;box-shadow:0 9px 24px rgba(109,106,239,.2)!important}
+html.dark .prayer-card .pr2.next{background:linear-gradient(125deg,#8177e9,#a99bf5)!important;color:#171429!important}
+.prayer-card .pr2:not(.next){background:var(--surface-raised)!important;border-color:var(--border)!important;color:var(--text)!important}
+.prayer-card .pr2:hover{border-color:var(--lavender)!important}
+:is(.dash-widget,.wbox,.prayer-card,.note-card,.routine-card) :is(.pattern,.pattern-rail,.pattern-corner){color:var(--lavender);border-color:var(--border)}
+html.dark :is(.dash-widget,.wbox,.prayer-card,.note-card,.routine-card){border-color:var(--border)}
+html:not(.dark) :is(.dash-widget,.wbox,.prayer-card,.note-card,.routine-card){border-color:var(--border)}
+/* Recolor decorative SVG patterns without affecting chart series or user-defined data colors. */
+:root{--pattern-ink:#B2A6DD;--pattern-color:#B2A6DD;--interlock-color:#D3CCE0}
+html.dark{--pattern-ink:#766DAD;--pattern-color:#766DAD;--interlock-color:#4B456C}
+
+html:not(.dark) .brand .t{color:#1E2230}html.dark .brand .t{color:#F5F4FA}html:not(.dark) .menurow{background:#fff}html.dark .menurow{background:#232437}html:not(.dark) :is(.hfilter.on,.fbtn.on,.cwtype.on){color:#6D6AEF}html.dark :is(.hfilter.on,.fbtn.on,.cwtype.on){color:#AAA0FF}html:not(.dark) th.colsel{background:#EEEAFE}html.dark th.colsel{background:#312F4B}
