@@ -6,15 +6,15 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob: 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://accounts.google.com https://apis.google.com https://*.gstatic.com; object-src 'none'; base-uri 'self';">
 <title>Zainah Workspace</title>
 <script>try{var _t=localStorage.getItem('zainah.theme')||'dark';document.documentElement.classList.toggle('dark',_t!=='light');}catch(e){document.documentElement.classList.add('dark');}</script>
-<meta name="theme-color" content="#161722">
+<meta name="theme-color" content="#11111b">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Zainah Workspace">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" sizes="any" href="assets/favicon.ico">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32-v4.png">
+<link rel="icon" sizes="any" href="assets/favicon-v4.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon-v4.png">
+<link rel="manifest" href="site.webmanifest?v=4">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js" crossorigin="anonymous"></script>
 <script src="https://accounts.google.com/gsi/client" async defer></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -4030,7 +4030,7 @@ html:not(.dark) .kc-chip.p-med,html:not(.dark) .tl2-prio-pill.p-med{color:#8f4a1
 :root{--violet:#6D6AEF;--lavender:#978BDF;--lilac:#B5A9E6;--peach:#D3CCE0;--peach-deep:#6D6AEF;--bg:#F7F8FA;--card:#FFFFFF;--border:#E5E8EF;--text:#34354E;--muted:#6B7280;--surface-raised:#FCFCFE;--surface-hover:#F3F0FF;--surface-selected:#EEEAFE;--surface-sel:#EEEAFE;--lilac-soft:#EEEAFE;--lavender-soft:#EEEAFE;--grad-iri:linear-gradient(120deg,#6D6AEF,#978BDF);--grad:linear-gradient(120deg,#6D6AEF,#978BDF);--grad-action:linear-gradient(120deg,#6D6AEF,#978BDF);--grad-iri-rev:linear-gradient(120deg,#6D6AEF,#978BDF 48%,#D3CCE0);--glow-lav:0 10px 30px rgba(109,106,239,.24);--grid-selection-ink:#6D6AEF;--grid-selection-tint:rgba(109,106,239,.075)}
 html.dark{--bg:#161722;--card:#232437;--border:rgba(191,215,255,.16);--text:#F5F4FA;--muted:#BCB8D4;--surface-raised:#2A2B40;--surface-hover:#353153;--surface-selected:#344F8A;--surface-sel:#344F8A;--head-bg:#2A2B40;--grid-line:#2E406D;--row-hover:#263761;--lilac-soft:#243A66;--lavender-soft:#353153;--grid-selection-ink:#B5A9E6;--grid-selection-tint:rgba(181,169,230,.09)}
 </style>
-<link rel="stylesheet" href="assets/zainah-theme.css">
+<link rel="stylesheet" href="assets/zainah-theme.css?v=4">
 <style id="pastel-skies-corrective">
 
 /* ==== Pastel Skies corrective override ==== */
@@ -4186,12 +4186,171 @@ html.dark button.nav.active::before,html.dark aside button.nav.active::before{ba
 html:not(.dark) .app-card .big{background:linear-gradient(120deg,#8b84f6,#9dc0ff,#d59dbf)!important;-webkit-background-clip:text;background-clip:text}
 
 </style>
+<style id="zainah-v4-final">
+
+/* Zainah Workspace Pastel Skies v4: dark contrast, clean edges, restored patterns */
+:root{
+ --brand-sapphire:#7467e8; --brand-cornflower:#958afb;
+ --violet:#7062df!important; --lavender:#8174e9!important; --lilac:#ada4ef!important;
+ --bg:#f7f8fa!important; --card:#ffffff!important; --border:#e6e6ef!important;
+ --text:#22243a!important; --muted:#676c80!important; --surface-raised:#f8f8fc!important;
+ --surface-hover:#f2efff!important; --surface-selected:#eeebff!important; --surface-sel:#eeebff!important;
+ --head-bg:#f8f7fd!important; --grid-line:#e6e6ef!important; --row-hover:#f9f7ff!important;
+ --grad-iri:linear-gradient(100deg,#7564df,#8f81ea)!important;
+ --grad-action:linear-gradient(100deg,#7564df,#8f81ea)!important;
+ --grad:linear-gradient(100deg,#7564df,#8f81ea)!important;
+ --grid-selection-ink:#7564df!important; --grid-selection-tint:rgba(117,100,223,.10)!important;
+}
+html.dark{
+ --bg:#11111b!important; --card:#1c1b2c!important; --border:#39334e!important;
+ --text:#faf9ff!important; --muted:#bcb6d0!important;
+ --violet:#ab91ff!important; --lavender:#a797ff!important; --lilac:#d1c2ff!important;
+ --lilac-soft:#302a48!important; --lavender-soft:#302a48!important;
+ --surface-raised:#232136!important; --surface-hover:#2e2944!important;
+ --surface-selected:#31294e!important; --surface-sel:#31294e!important;
+ --head-bg:#242038!important; --grid-line:#39334e!important; --row-hover:#272238!important;
+ --grad-iri:linear-gradient(105deg,#705cda,#9879ec)!important;
+ --grad-action:linear-gradient(105deg,#705cda,#9879ec)!important;
+ --grad:linear-gradient(105deg,#705cda,#9879ec)!important;
+ --grid-selection-ink:#b29cff!important; --grid-selection-tint:rgba(178,156,255,.13)!important;
+}
+/* App icon provides its own rounded square and shading. Never double-outline it. */
+.logo .logo-mark,.logo-mark,.zw-icon,#authRoot .auth-logo,.auth-logo{
+ background:none!important;box-shadow:none!important;border:0!important;outline:none!important;
+ overflow:visible!important;filter:none!important;
+}
+.logo-mark img,.zw-icon img,#authRoot .auth-logo img,.auth-logo img{
+ display:block!important;width:100%!important;height:100%!important;object-fit:contain!important;
+ border:0!important;outline:none!important;filter:none!important;
+}
+/* Login: remove unwanted oversized circular overlay; retain only the original small tile band. */
+#authRoot::before,#authRoot::after{content:none!important;display:none!important}
+#authRoot{
+ background:linear-gradient(145deg,#11101c 0%,#191727 58%,#171523 100%)!important;
+ color:#faf9ff!important;
+}
+#authRoot .auth-card{
+ background:#1d1b2b!important;border:1px solid #39324d!important;
+ box-shadow:0 28px 82px rgba(1,1,10,.42)!important;
+ backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+ color:#faf9ff!important;
+}
+#authRoot .auth-card::before{
+ background:#a292e7!important;color:#a292e7!important;opacity:.17!important;
+}
+#authRoot .auth-card h2,#authRoot .marc{color:#fff!important}
+#authRoot .zw-auth-subtitle,#authRoot .tag{color:#b5a9e2!important}
+#authRoot .auth-tabs{background:#2a263a!important;border:1px solid #45405d!important}
+#authRoot .auth-tabs button{color:#c5bed4!important}
+#authRoot .auth-tabs button.active{
+ background:linear-gradient(105deg,#6c5fd6,#9a7be6)!important;color:#fff!important;
+ box-shadow:0 3px 10px rgba(74,53,127,.18)!important;
+}
+#authRoot .fld{background:#29283c!important;border:1px solid #49435e!important;color:#faf9ff!important}
+#authRoot .fld::placeholder{color:#b7b0cb!important}
+#authRoot .fld:focus{border-color:#a690fb!important;box-shadow:0 0 0 3px rgba(166,144,251,.16)!important}
+#authRoot .pwf-eye{color:#bbaaff!important}
+#authRoot .btn.full{background:linear-gradient(105deg,#6658d2,#aa78dc)!important;color:#fff!important;box-shadow:none!important}
+#authRoot .auth-links button{color:#b6a4ff!important}
+/* Subtle and contrast-rich loader, fully styled before auth/app scripts execute. */
+#splash{background:linear-gradient(155deg,#11111c 0%,#1b172c 60%,#16131f 100%)!important}
+#splash::before,#splash::after{display:none!important}
+#splash .zw-splash-lockup strong{color:#fff!important}
+#splash .zw-splash-lockup small{color:#c5b6ef!important}
+#splash .splash-bar{
+ background:linear-gradient(90deg,transparent,#6d5bd9 20%,#aa85e7 52%,#e2aad8 80%,transparent)!important;
+ box-shadow:0 0 16px rgba(161,129,236,.22)!important;
+}
+html:not(.dark) #splash{background:linear-gradient(155deg,#f9f9fd 0%,#efedfb 60%,#f7f5ff 100%)!important}
+html:not(.dark) #splash .zw-splash-lockup strong{color:#242238!important}
+html:not(.dark) #splash .zw-splash-lockup small{color:#7568a5!important}
+/* Rich, controlled three-stop time themes; no broad glowing circles or blob overlays. */
+.hx-hero{background:#191727!important;border:1px solid #38314d!important;
+ box-shadow:0 18px 42px rgba(11,8,32,.20)!important}
+.hx-bg{filter:none!important;opacity:1!important}
+.hero-morning .hx-bg{background:linear-gradient(113deg,#4d386b 0%,#906589 53%,#b5848c 100%)!important}
+.hero-afternoon .hx-bg{background:linear-gradient(113deg,#34357f 0%,#5d58b5 54%,#727eb3 100%)!important}
+.hero-evening .hx-bg,.hero-night .hx-bg{background:linear-gradient(113deg,#121325 0%,#22203e 53%,#36284b 100%)!important}
+.hx-hero::before,.hx-hero::after,.hx-bg::before,.hx-bg::after{content:none!important;display:none!important}
+.hx-hero .hx-greet,.hx-hero .hx-greet #userName{
+ color:#fff!important;-webkit-text-fill-color:#fff!important;background:none!important;
+ text-shadow:none!important;
+}
+.hx-hero .eyebrow{color:#e4def2!important;opacity:1!important}
+.hx-hero .hx-box{background:rgba(15,12,32,.48)!important;border:1px solid rgba(212,192,255,.25)!important;
+ box-shadow:none!important;backdrop-filter:none!important}
+.hx-hero .hx-box:hover{background:rgba(18,13,39,.62)!important;border-color:rgba(213,186,255,.45)!important}
+.hx-hero .hx-lbl,.hx-hero .hx-up-h{color:#cfc7dd!important}
+.hx-hero .hx-sub,.hx-hero .up2-time,.hx-hero .up2-more{color:#ddd5e8!important}
+.hx-hero .hx-val,.hx-hero .hx-val *,.hx-hero #clockTime{
+ background:none!important;color:#faf9ff!important;-webkit-text-fill-color:#faf9ff!important;
+ text-shadow:none!important;animation:none!important;
+}
+.hx-hero .hx-val svg,.hx-hero .hx-val .wx-ic svg{color:#d7c8ff!important;stroke:currentColor}
+.hx-hero #clockTime .mer{color:#e5daff!important;-webkit-text-fill-color:#e5daff!important}
+.hx-hero .up2-day.today .up2-wk{color:#d9c9ff!important}
+/* This wrapper accidentally became a huge transparent gray stripe across the hero. */
+.hx-ribbon,.hero-ribbon,.hx-hero .hx-ribbon{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ padding:0!important;min-height:0!important;filter:none!important;
+}
+.hx-ribbon>*{background:rgba(24,18,49,.48)!important;border:1px solid rgba(218,198,255,.24)!important;
+ color:#fff!important;box-shadow:none!important}
+/* Stars and small moon may remain, but with no radial rings or oversized effects. */
+.hero-evening .hx-moon{width:27px!important;height:27px!important;right:25px!important;top:25px!important;
+ background:linear-gradient(135deg,#fffafd,#dcd1fe)!important;box-shadow:0 0 9px rgba(226,214,255,.21)!important}
+.hero-evening .hx-stars{opacity:.35!important}
+/* Prayer widget: saturated violet in both modes, not old salmon or washed-out blue. */
+.prayer-card{background:var(--card)!important;border-color:var(--border)!important}
+.pw-wrap{background:#ffffff!important;color:var(--text)!important}
+html.dark .prayer-card{background:#1b192c!important;border-color:#3a3351!important}
+html.dark .pw-wrap{background:linear-gradient(115deg,#1d1a30,#211c35 60%,#251d35)!important;
+ color:#f9f6ff!important}
+.pw-ring .pw-track{stroke:rgba(134,113,193,.19)!important}
+.pw-ring .pw-arc{stroke:#8467df!important}
+html.dark .pw-ring .pw-track{stroke:rgba(216,195,255,.18)!important}
+html.dark .pw-ring .pw-arc{stroke:#bf91ee!important}
+.pw-ringc b,.pw-nt,.pw-col.on .pw-tm,.pw-col.on .pw-nm{color:#7058d3!important}
+html.dark .pw-ringc b,html.dark .pw-nt,html.dark .pw-col.on .pw-tm,html.dark .pw-col.on .pw-nm{color:#cfb2ff!important}
+.pw-bar{background:rgba(126,95,190,.16)!important}
+html.dark .pw-bar{background:rgba(220,204,255,.13)!important}
+.pw-bar i{background:linear-gradient(90deg,#715ed7,#b77ee4)!important}
+.pw-dot{background:#9a7ae6!important;box-shadow:0 0 0 3px rgba(132,102,217,.17)!important}
+.pw-col.on{background:rgba(122,96,220,.11)!important;border:1px solid rgba(122,96,220,.20)!important}
+html.dark .pw-col.on{background:rgba(176,139,249,.15)!important;border-color:rgba(176,139,249,.22)!important}
+html:not(.dark) .pw-col.on .pw-nm,html:not(.dark) .pw-col.on .pw-tm{color:#7058d3!important}
+.prayer-next{background:linear-gradient(105deg,#ede9ff,#eff2ff,#fbeef6)!important;color:#282440!important;box-shadow:none!important}
+html.dark .prayer-next{background:linear-gradient(105deg,#25203b,#2c2340,#312441)!important;color:#fff!important}
+.prayer-next::after{display:none!important}
+.tp-cd,.prayer-next .tp-cd{color:#7258d6!important}
+html.dark .tp-cd,html.dark .prayer-next .tp-cd{color:#c6a3ff!important}
+/* Restore original rounded interlock SVG — the v3 dots were NOT the pattern. */
+.tc5-pat{
+ background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cg fill='%23ffffff'%3E%3Cpath d='M13,13Q3,13,0,0Q13,3,13,13Z'/%3E%3Cpath d='M13,13Q13,3,26,0Q23,13,13,13Z'/%3E%3Cpath d='M13,13Q23,13,26,26Q13,23,13,13Z'/%3E%3Cpath d='M13,13Q13,23,0,26Q3,13,13,13Z'/%3E%3C/g%3E%3C/svg%3E")!important;
+ background-size:26px 26px!important;background-position:0 0!important;background-repeat:repeat!important;
+ opacity:.33!important;
+ -webkit-mask-image:linear-gradient(90deg,#000 0%,#000 20%,rgba(0,0,0,.45) 35%,transparent 53%)!important;
+ mask-image:linear-gradient(90deg,#000 0%,#000 20%,rgba(0,0,0,.45) 35%,transparent 53%)!important;
+}
+.tc5-band{background:linear-gradient(110deg,#6559cb 0%,#657ad5 50%,#9966b0 100%)!important}
+html.dark .tc5-band{background:linear-gradient(110deg,#46377b 0%,#594b9a 55%,#653f7c 100%)!important}
+.tc5-band::after{display:none!important}
+.tc5-band .tc5-month,.tc5-band .tc5-arrow,.tc5-band .tc5-today{color:#fff!important}
+.tc5-band .tc5-arrow,.tc5-band .tc5-today{background:rgba(24,14,64,.19)!important;border-color:rgba(255,255,255,.31)!important}
+.tc5-band .tc5-arrow:hover,.tc5-band .tc5-today:hover{background:rgba(24,14,64,.32)!important}
+/* Task panel patterns remain geometric: no new spheres, circles or halos. */
+html.dark .td-panel,html.dark .sd-panel,html.dark .modal.side{background:#1d1b2c!important}
+html:not(.dark) .td-panel,html:not(.dark) .sd-panel{background:#fff!important}
+html.dark .tdp-scroll,html.dark .sd-scroll{background:#1d1b2c!important}
+html.dark .logo .zw-brand-text .zw-brand-name{color:#fff!important}
+
+</style>
 </head>
 <body>
-<div id="splash"><div class="zw-splash-lockup"><div class="zw-icon"><img src="assets/zainah-z.png" alt=""></div><strong>Zainah</strong><small>WORKSPACE</small></div><div class="splash-bar"></div></div>
+<div id="splash"><div class="zw-splash-lockup"><div class="zw-icon"><img src="assets/zainah-z-v4.png" alt=""></div><strong>Zainah</strong><small>WORKSPACE</small></div><div class="splash-bar"></div></div>
 
 <aside>
-  <div class="logo" aria-label="Zainah Workspace"><div class="logo-mark"><img src="assets/zainah-z.png" alt=""></div><div class="zw-brand-text"><b id="brandName" class="zw-brand-name">Zainah</b><small class="zw-brand-category">WORKSPACE</small></div></div>
+  <div class="logo" aria-label="Zainah Workspace"><div class="logo-mark"><img src="assets/zainah-z-v4.png" alt=""></div><div class="zw-brand-text"><b id="brandName" class="zw-brand-name">Zainah</b><small class="zw-brand-category">WORKSPACE</small></div></div>
   <div class="nav-label">Home</div>
   <button class="nav active" data-tab="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8M5 10v10h14V10"/></svg>Dashboard</button>
   <button class="nav" data-tab="notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg>Notifications<span class="nav-badge" id="navNotifBadge"></span></button>
@@ -9250,11 +9409,11 @@ var I_EYEOFF='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-
 function togglePw(inId,btnId){ var i=document.getElementById(inId), b=document.getElementById(btnId); if(!i) return; var show=(i.type==="password"); i.type=show?"text":"password"; if(b){ b.innerHTML=show?I_EYEOFF:I_EYE; b.setAttribute("aria-label",show?"Hide password":"Show password"); b.title=show?"Hide password":"Show password"; } try{ i.focus(); var v=i.value; i.value=""; i.value=v; }catch(e){} }
 function authUI(mode){
   mode=mode||"in";
-  const root=document.getElementById("authRoot"); root.style.display="grid"; document.documentElement.classList.add("dark"); document.documentElement.classList.add("auth-open");
+  const root=document.getElementById("authRoot"); root.style.display="grid"; document.documentElement.classList.add("auth-open");
   const tabs=`<div class="auth-tabs"><button class="${mode==='in'?'active':''}" onclick="authUI('in')">Sign in</button><button class="${mode==='up'?'active':''}" onclick="authUI('up')">Create account</button></div>`;
   var canClose=false; try{ canClose=!!localStorage.getItem(GUEST_FLAG); }catch(e){}
   root.innerHTML=`<div class="auth-card">${canClose?'<button type="button" class="auth-x" onclick="closeAuth()" aria-label="Close" title="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>':''}
-    <div class="auth-logo"><img src="assets/zainah-z.png" alt=""></div>
+    <div class="auth-logo"><img src="assets/zainah-z-v4.png" alt=""></div>
     <h2 class="marc">Zainah</h2><div class="zw-auth-subtitle">WORKSPACE</div>
     ${tabs}
     <input class="fld" id="aEmail" type="email" placeholder="Email" autocomplete="email" onkeydown="if(event.key==='Enter')document.getElementById('aBtn').click()">
