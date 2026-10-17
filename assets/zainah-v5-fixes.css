@@ -1,0 +1,148 @@
+
+/* ZAINAH v5: rich daypart atmospheres, readable routine days, cohesive notes, clean logo */
+/* Use the already-approved v4 theme tokens for all non-specific UI. */
+
+/* HERO — vivid three-way daypart palette; no pseudo-element blobs. */
+.hx-hero{
+  background:#161529!important;
+  border:1px solid rgba(204,186,255,.26)!important;
+  box-shadow:0 20px 45px -27px rgba(52,35,120,.48)!important;
+  isolation:isolate!important;
+}
+.hx-hero .hx-bg{
+  opacity:1!important;filter:saturate(1.16)!important;
+  background-size:165% 165%!important;
+  background-position:35% 48%!important;
+  animation:z5-sky-shift 24s ease-in-out infinite alternate!important;
+  transform:none!important;
+}
+/* Sunrise: indigo -> rose -> warm coral. */
+.hx-hero.hero-morning .hx-bg{
+  background-image:linear-gradient(115deg,#45377e 0%,#8f59ae 31%,#d179ae 67%,#edaa83 100%)!important;
+}
+/* Afternoon: vivid sapphire -> periwinkle -> blush. */
+.hx-hero.hero-afternoon .hx-bg{
+  background-image:linear-gradient(115deg,#343485 0%,#5f59c8 35%,#8b8be7 71%,#df9cbf 100%)!important;
+}
+/* Night: deep aubergine -> violet -> plum, with soft magenta horizon. */
+.hx-hero.hero-evening .hx-bg,.hx-hero.hero-night .hx-bg{
+  background-image:linear-gradient(115deg,#17182f 0%,#302653 35%,#584187 73%,#a05c9a 100%)!important;
+}
+@keyframes z5-sky-shift{
+  from{background-position:10% 43%}
+  to{background-position:92% 57%}
+}
+@media(prefers-reduced-motion:reduce){
+  .hx-hero .hx-bg{animation:none!important;background-position:45% 50%!important}
+}
+.hx-hero::before,.hx-hero::after,.hx-hero .hx-bg::before,.hx-hero .hx-bg::after{
+  content:none!important;display:none!important;
+}
+.hx-hero .hx-box{
+  background:rgba(18,15,48,.28)!important;
+  border:1px solid rgba(255,255,255,.30)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06)!important;
+  backdrop-filter:blur(7px) saturate(1.1)!important;
+  -webkit-backdrop-filter:blur(7px) saturate(1.1)!important;
+}
+.hx-hero .hx-box:hover{
+  background:rgba(18,15,48,.40)!important;
+  border-color:rgba(255,255,255,.50)!important;
+}
+.hx-hero .hx-greet,.hx-hero .hx-greet #userName,
+.hx-hero .hx-val,.hx-hero .hx-val *, .hx-hero #clockTime{
+  color:#fff!important;-webkit-text-fill-color:#fff!important;text-shadow:none!important;
+}
+.hx-hero .hx-lbl,.hx-hero .hx-up-h{color:#e9e2fb!important}
+.hx-hero .hx-sub,.hx-hero .up2-time,.hx-hero .up2-more{color:#eee7fb!important}
+.hx-hero .up2-day.today .up2-wk{color:#f1ddff!important}
+.hx-hero .hx-ribbon,.hx-hero .hero-ribbon{
+  background:transparent!important;box-shadow:none!important;border:0!important;filter:none!important;
+}
+.hx-hero .hx-ribbon>*{background:rgba(31,23,75,.43)!important;border:1px solid rgba(255,255,255,.3)!important}
+/* Keep the original fine stars/moon; do not resurrect large radial shapes. */
+.hx-hero.hero-evening .hx-stars{opacity:.48!important}
+.hx-hero.hero-evening .hx-moon{box-shadow:0 0 11px rgba(225,199,255,.28)!important}
+
+/* ROUTINE: selected buttons were WHITE on WHITE because of an older background rule.
+   Explicit background-image + background-color both win over legacy background shorthands. */
+html:not(.dark) .rday,html:not(.dark) .rday:not(.on){
+  color:#575c73!important;background:#ffffff!important;
+  border:1px solid #dddbe9!important;
+}
+html:not(.dark) .rday.on,html:not(.dark) .rday.on:hover,html:not(.dark) .rday.on:focus-visible{
+  background-color:#715bd6!important;
+  background-image:linear-gradient(110deg,#6256d0 0%,#856be1 100%)!important;
+  color:#ffffff!important;
+  border-color:#7460d9!important;
+  box-shadow:0 4px 11px rgba(106,87,211,.14)!important;
+  opacity:1!important;
+}
+html.dark .rday:not(.on){
+  background-color:#242135!important;background-image:none!important;
+  color:#c8c0dc!important;border-color:#484057!important;
+}
+html.dark .rday.on,html.dark .rday.on:hover,html.dark .rday.on:focus-visible{
+  background-color:#7261d1!important;
+  background-image:linear-gradient(110deg,#7562db 0%,#9878dc 100%)!important;
+  color:#ffffff!important;
+  border-color:#9e86f1!important;
+  box-shadow:0 5px 15px rgba(120,97,216,.15)!important;
+  opacity:1!important;
+}
+html:not(.dark) .rday-quick button{color:#514b78!important;background:#f1eefb!important;border-color:#ded8ed!important}
+html.dark .rday-quick button{color:#e0d4f7!important;background:#2e2945!important;border-color:#514566!important}
+.rday:focus-visible{outline:2px solid var(--lavender)!important;outline-offset:2px!important}
+
+/* NOTES: color picker entries are retained by ID; the swatches now come from Pastel Skies.
+   Keep the paper/sticky aesthetic, but remove legacy orange/green pin and harsh shadow. */
+.sticky-pin{
+  background:radial-gradient(circle at 35% 28%,#e8ddff 0%,#a18ced 46%,#7255c8 100%)!important;
+  box-shadow:0 3px 8px rgba(54,39,104,.30)!important;
+}
+.sticky-fold{border-color:transparent rgba(101,78,150,.18) transparent transparent!important}
+html:not(.dark) .sticky{
+  box-shadow:0 12px 28px -16px rgba(59,43,112,.35),inset 0 1px 0 rgba(255,255,255,.40)!important;
+  border:1px solid rgba(83,68,134,.10)!important;
+}
+html:not(.dark) .sticky:hover{
+  box-shadow:0 20px 40px -18px rgba(59,43,112,.43),inset 0 1px 0 rgba(255,255,255,.38)!important;
+}
+html.dark .sticky{
+  box-shadow:0 18px 38px -20px rgba(0,0,0,.75),inset 0 1px 0 rgba(255,255,255,.18)!important;
+  border:1px solid rgba(210,192,255,.12)!important;
+}
+.sticky .ntitle,.sticky .nbody,.sticky .nchk-row,.sticky .nlabel,.sticky .ndate{
+  opacity:1!important;
+}
+.sticky .nlabel{background:color-mix(in srgb,var(--nink) 11%,transparent)!important}
+.sticky .nib:hover{background:color-mix(in srgb,var(--nink) 12%,transparent)!important}
+.note-po.on{box-shadow:0 0 0 2px var(--lavender),inset 0 0 0 1px rgba(40,30,80,.15)!important}
+
+/* LOGO: no wrapper border, halo or inset line; crop away the antialiased perimeter
+   of the existing icon asset at render time. The logo artwork and wordmark are preserved. */
+.logo .logo-mark,.logo-mark,.zw-icon,#authRoot .auth-logo,.auth-logo{
+  position:relative!important;overflow:hidden!important;
+  border:0!important;outline:0!important;outline-offset:0!important;
+  border-radius:24%!important;
+  background:transparent!important;box-shadow:none!important;filter:none!important;
+  isolation:isolate!important;
+}
+.logo .logo-mark::before,.logo .logo-mark::after,.zw-icon::before,.zw-icon::after,
+#authRoot .auth-logo::after{
+  content:none!important;display:none!important;
+}
+.logo-mark img,.zw-icon img,#authRoot .auth-logo img,.auth-logo img{
+  position:absolute!important;display:block!important;
+  top:-4%!important;left:-4%!important;
+  width:108%!important;height:108%!important;max-width:none!important;
+  margin:0!important;padding:0!important;
+  border:0!important;outline:0!important;box-shadow:none!important;
+  border-radius:0!important;
+  object-fit:fill!important;filter:none!important;transform:none!important;
+}
+/* The auth card decorative band stays; only the icon's border is removed. */
+#authRoot .auth-logo{box-shadow:none!important;border:0!important}
+/* Any sign-in mode or saved theme uses the same clean logo. */
+html.dark #authRoot .auth-logo,html:not(.dark) #authRoot .auth-logo,
+html.dark .logo-mark,html:not(.dark) .logo-mark{box-shadow:none!important;border-color:transparent!important}

@@ -4252,6 +4252,26 @@ html.dark{
 #authRoot .pwf-eye{color:#bbaaff!important}
 #authRoot .btn.full{background:linear-gradient(105deg,#6658d2,#aa78dc)!important;color:#fff!important;box-shadow:none!important}
 #authRoot .auth-links button{color:#b6a4ff!important}
+/* Follow the saved user theme on the authentication screen. */
+html:not(.dark) #authRoot{background:linear-gradient(145deg,#fafaff 0%,#f2effb 56%,#f8f6ff 100%)!important;color:#25233a!important}
+html:not(.dark) #authRoot .auth-card{background:rgba(255,255,255,.97)!important;border:1px solid #e4e0f3!important;box-shadow:0 24px 70px rgba(79,63,140,.13)!important;color:#25233a!important}
+html:not(.dark) #authRoot .auth-card::before{color:#8977cf!important;background:#8977cf!important;opacity:.20!important}
+html:not(.dark) #authRoot .auth-card h2,html:not(.dark) #authRoot .marc{color:#25233a!important}
+html:not(.dark) #authRoot .zw-auth-subtitle,html:not(.dark) #authRoot .tag{color:#716a87!important}
+html:not(.dark) #authRoot .auth-tabs{background:#f1eefb!important;border:1px solid #e3def3!important}
+html:not(.dark) #authRoot .auth-tabs button{color:#6c657d!important}
+html:not(.dark) #authRoot .auth-tabs button.active{background:linear-gradient(105deg,#7565dd,#a184e2)!important;color:#fff!important}
+html:not(.dark) #authRoot .fld{background:#fbfaff!important;border:1px solid #ded9ec!important;color:#25233a!important}
+html:not(.dark) #authRoot .fld::placeholder{color:#8e899b!important}
+html:not(.dark) #authRoot .pwf-eye{color:#7868cb!important}
+html:not(.dark) #authRoot .btn.full{background:linear-gradient(105deg,#6e5bd4,#9476da)!important;color:#fff!important}
+html:not(.dark) #authRoot .auth-links button{color:#6755ce!important}
+/* Calm solid surfaces: remove remaining background glows from the general UI. */
+html.dark body::before{background:#11111b!important}
+html.dark aside{background:#171523!important;border-color:#39334e!important}
+html.dark .topbar{background:#171523!important;border-color:#39334e!important}
+html.dark :is(.card:not([style*="background"]),.note-card:not([style*="background"]),.routine-card:not([style*="background"])){background:#1c1b2c!important;border-color:#39334e!important}
+html.dark aside button.nav.active{background:#302749!important;color:#d0b9ff!important}
 /* Subtle and contrast-rich loader, fully styled before auth/app scripts execute. */
 #splash{background:linear-gradient(155deg,#11111c 0%,#1b172c 60%,#16131f 100%)!important}
 #splash::before,#splash::after{display:none!important}
@@ -4344,7 +4364,20 @@ html:not(.dark) .td-panel,html:not(.dark) .sd-panel{background:#fff!important}
 html.dark .tdp-scroll,html.dark .sd-scroll{background:#1d1b2c!important}
 html.dark .logo .zw-brand-text .zw-brand-name{color:#fff!important}
 
+
+/* v4 finishing: readable sidebar navigation in both appearance modes. */
+html:not(.dark) aside button.nav{color:#53566e!important;text-shadow:none!important}
+html:not(.dark) aside button.nav:hover{background:#f3f0ff!important;color:#342c6c!important}
+html:not(.dark) aside button.nav.active{background:#eeebff!important;color:#5c4bd3!important;box-shadow:none!important}
+html:not(.dark) aside button.nav.active::before{background:#7a67ea!important}
+html:not(.dark) aside .nav-label{color:#72778c!important;opacity:1!important}
+html.dark aside button.nav{color:#bbb6cf!important;text-shadow:none!important}
+html.dark aside button.nav:hover{background:#29253e!important;color:#f5f2ff!important}
+html.dark aside button.nav.active{background:#312a4d!important;color:#d3c6ff!important;box-shadow:none!important}
+html.dark aside button.nav.active::before{background:#a996ff!important}
+html.dark aside .nav-label{color:#aaa6c0!important;opacity:1!important}
 </style>
+<link rel="stylesheet" href="assets/zainah-v5-fixes.css?v=5">
 </head>
 <body>
 <div id="splash"><div class="zw-splash-lockup"><div class="zw-icon"><img src="assets/zainah-z-v4.png" alt=""></div><strong>Zainah</strong><small>WORKSPACE</small></div><div class="splash-bar"></div></div>
@@ -6556,7 +6589,7 @@ function renderHome(){
   var ps=document.getElementById("periodSub"); if(ps) ps.textContent=slot.charAt(0).toUpperCase()+slot.slice(1);
   var hc=document.getElementById("heroCard"); if(hc) hc.className="hx-hero hero-"+slot;
   var un=document.getElementById("userName"); if(un) un.textContent=(data.profile.name||(user&&user.email?user.email.split("@")[0]:"")||"there");
-  var bn=document.getElementById("brandName"); if(bn) bn.textContent="Workspace";
+  var bn=document.getElementById("brandName"); if(bn) bn.textContent="Zainah";
   var dl=document.getElementById("dateLine"); if(dl) dl.textContent=now.toLocaleDateString(undefined,{weekday:"short",month:"short",day:"numeric"});
   var hl=document.getElementById("hijriLine"); if(hl) hl.textContent=hijri(now);
   tickClock(); renderWelcomeSummary();
@@ -8369,14 +8402,15 @@ function saveNoteEdit(id){
   save(); closeModal(); if(document.getElementById("notesList")) renderNotes(); renderRecentNotes(); toast(id?"Note updated":"Note added");
 }
 var NOTE_COLORS=[
-  {id:"lav",  a:"#978BDF",b:"#6f4fb0",ink:"#ffffff",sub:"rgba(255,255,255,.78)"},
-  {id:"iris", a:"#B5A9E6",b:"#7f61bd",ink:"#ffffff",sub:"rgba(255,255,255,.78)"},
-  {id:"peach",a:"#D3CCE0",b:"#e2a071",ink:"#3a2413",sub:"rgba(58,36,19,.72)"},
-  {id:"amber",a:"#6D6AEF",b:"#c56c39",ink:"#2a1608",sub:"rgba(42,22,8,.72)"},
-  {id:"mint", a:"#7fd1c4",b:"#5fb7a8",ink:"#0d2b26",sub:"rgba(13,43,38,.7)"},
-  {id:"sky",  a:"#5aa2ea",b:"#3b8cbd",ink:"#04202f",sub:"rgba(4,32,47,.72)"},
-  {id:"rose", a:"#F06D83",b:"#e0746b",ink:"#2f0f0c",sub:"rgba(47,15,12,.72)"},
-  {id:"slate",a:"#6B7280",b:"#544a6c",ink:"#ffffff",sub:"rgba(255,255,255,.72)"}
+  /* Existing IDs remain stable so previously saved notes keep their selected shade. */
+  {id:"lav",  a:"#D8D0FF",b:"#B8AAF0",ink:"#282042",sub:"rgba(40,32,66,.78)"},
+  {id:"iris", a:"#584A9E",b:"#6B59AF",ink:"#FFFFFF",sub:"rgba(255,255,255,.86)"},
+  {id:"peach",a:"#F8DDEB",b:"#EAB7D7",ink:"#422540",sub:"rgba(66,37,64,.78)"},
+  {id:"amber",a:"#E8E0FF",b:"#CBB9F5",ink:"#30254B",sub:"rgba(48,37,75,.78)"},
+  {id:"mint", a:"#DBECFF",b:"#B9D7FC",ink:"#243551",sub:"rgba(36,53,81,.78)"},
+  {id:"sky",  a:"#BED3FF",b:"#9FBDF3",ink:"#223250",sub:"rgba(34,50,80,.80)"},
+  {id:"rose", a:"#F5D1E8",b:"#E4A8CD",ink:"#452440",sub:"rgba(69,36,64,.80)"},
+  {id:"slate",a:"#3C3753",b:"#5B5377",ink:"#FFFFFF",sub:"rgba(255,255,255,.84)"}
 ];
 function noteHue(n){
   var c=NOTE_COLORS.find(function(x){ return x.id===(n&&n.color); });
